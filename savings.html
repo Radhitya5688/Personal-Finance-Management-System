@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings | PFMS</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><span>PF</span><b>PFMS</b></a>
+    <nav class="nav">
+      <a href="dashboard.html" data-page="dashboard">Dashboard</a>
+      <a href="transactions.html" data-page="transactions">Transactions</a>
+      <a href="budget.html" data-page="budget">Budget</a>
+      <a href="savings.html" data-page="savings">Savings</a>
+      <a href="reports.html" data-page="reports">Reports</a>
+    </nav>
+    <button class="ghost-btn logout-btn" id="logoutBtn">Logout</button>
+  </aside>
+
+  <main class="app-main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Goal tracking</p>
+        <h1>Savings</h1>
+      </div>
+      <div class="user-pill" id="userPill"></div>
+    </header>
+
+    <section class="two-column">
+      <form class="panel form-panel" id="savingsForm">
+        <div class="panel-head"><h2>Create Savings Goal</h2></div>
+        <label>Goal Name
+          <input type="text" id="goalName" required placeholder="Emergency fund, laptop, trip">
+        </label>
+        <label>Target Amount
+          <input type="number" id="goalTarget" min="0.01" step="0.01" required placeholder="Enter target">
+        </label>
+        <label>Current Saved Amount
+          <input type="number" id="goalSaved" min="0" step="0.01" required placeholder="Enter current saved amount">
+        </label>
+        <button class="primary-btn" type="submit">Save goal</button>
+        <p class="message" id="savingsMessage"></p>
+      </form>
+
+      <section class="panel-list" id="savingsList"></section>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

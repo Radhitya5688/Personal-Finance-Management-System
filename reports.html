@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports | PFMS</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><span>PF</span><b>PFMS</b></a>
+    <nav class="nav">
+      <a href="dashboard.html" data-page="dashboard">Dashboard</a>
+      <a href="transactions.html" data-page="transactions">Transactions</a>
+      <a href="budget.html" data-page="budget">Budget</a>
+      <a href="savings.html" data-page="savings">Savings</a>
+      <a href="reports.html" data-page="reports">Reports</a>
+    </nav>
+    <button class="ghost-btn logout-btn" id="logoutBtn">Logout</button>
+  </aside>
+
+  <main class="app-main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Generated from ledger</p>
+        <h1>Reports</h1>
+      </div>
+      <div class="user-pill" id="userPill"></div>
+    </header>
+
+    <section class="metric-grid compact">
+      <article class="metric-card"><p>Income Entries</p><h2 id="incomeCount">0</h2></article>
+      <article class="metric-card"><p>Expense Entries</p><h2 id="expenseCount">0</h2></article>
+      <article class="metric-card"><p>Largest Expense</p><h2 id="largestExpense">Loading</h2></article>
+      <article class="metric-card"><p>Net Result</p><h2 id="netResult">Loading</h2></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel chart-panel">
+        <div class="panel-head"><h2>Category Expense Report</h2></div>
+        <div id="categoryReport"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><h2>Transaction Summary</h2></div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Category</th><th>Income</th><th>Expense</th><th>Net</th></tr>
+            </thead>
+            <tbody id="summaryTable"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

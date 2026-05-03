@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget | PFMS</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><span>PF</span><b>PFMS</b></a>
+    <nav class="nav">
+      <a href="dashboard.html" data-page="dashboard">Dashboard</a>
+      <a href="transactions.html" data-page="transactions">Transactions</a>
+      <a href="budget.html" data-page="budget">Budget</a>
+      <a href="savings.html" data-page="savings">Savings</a>
+      <a href="reports.html" data-page="reports">Reports</a>
+    </nav>
+    <button class="ghost-btn logout-btn" id="logoutBtn">Logout</button>
+  </aside>
+
+  <main class="app-main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Category limits</p>
+        <h1>Budget</h1>
+      </div>
+      <div class="user-pill" id="userPill"></div>
+    </header>
+
+    <section class="two-column">
+      <form class="panel form-panel" id="budgetForm">
+        <div class="panel-head"><h2>Create Budget</h2></div>
+        <label>Expense Category
+          <input type="text" id="budgetCategory" required placeholder="Must match transaction category">
+        </label>
+        <label>Budget Limit
+          <input type="number" id="budgetLimit" min="0.01" step="0.01" required placeholder="Enter category limit">
+        </label>
+        <button class="primary-btn" type="submit">Save budget</button>
+        <p class="message" id="budgetMessage"></p>
+      </form>
+
+      <section class="panel-list" id="budgetList"></section>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

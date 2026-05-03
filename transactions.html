@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions | PFMS</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><span>PF</span><b>PFMS</b></a>
+    <nav class="nav">
+      <a href="dashboard.html" data-page="dashboard">Dashboard</a>
+      <a href="transactions.html" data-page="transactions">Transactions</a>
+      <a href="budget.html" data-page="budget">Budget</a>
+      <a href="savings.html" data-page="savings">Savings</a>
+      <a href="reports.html" data-page="reports">Reports</a>
+    </nav>
+    <button class="ghost-btn logout-btn" id="logoutBtn">Logout</button>
+  </aside>
+
+  <main class="app-main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Income and expense ledger</p>
+        <h1>Transactions</h1>
+      </div>
+      <div class="user-pill" id="userPill"></div>
+    </header>
+
+    <section class="two-column">
+      <form class="panel form-panel" id="transactionForm">
+        <div class="panel-head"><h2>Add Transaction</h2></div>
+        <label>Type
+          <select id="transactionType" required>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </label>
+        <label>Category
+          <input type="text" id="transactionCategory" required placeholder="Salary, Food, Rent, Travel">
+        </label>
+        <label>Amount
+          <input type="number" id="transactionAmount" min="0.01" step="0.01" required placeholder="Enter amount">
+        </label>
+        <label>Date
+          <input type="date" id="transactionDate" required>
+        </label>
+        <label>Description
+          <input type="text" id="transactionDescription" placeholder="Optional note">
+        </label>
+        <button class="primary-btn" type="submit">Save transaction</button>
+        <p class="message" id="transactionMessage"></p>
+      </form>
+
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Calculated balance</p>
+            <h2 id="transactionBalance">Loading</h2>
+          </div>
+        </div>
+        <div class="table-wrap tall">
+          <table>
+            <thead>
+              <tr><th>Date</th><th>Type</th><th>Category</th><th>Amount</th><th>Action</th></tr>
+            </thead>
+            <tbody id="transactionTable"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

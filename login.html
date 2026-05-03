@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | PFMS</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-visual">
+      <div class="brand-mark">PF</div>
+      <p class="eyebrow">Personal Finance Management System</p>
+      <h1>Plan money with calm, clear control.</h1>
+      <p class="auth-copy">Track income, expenses, budgets, savings goals and reports from your own financial entries.</p>
+      <div class="visual-card">
+        <span class="mini-icon">Rs</span>
+        <div>
+          <strong>Dynamic wallet balance</strong>
+          <p>Opening balance plus real transactions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <form class="auth-form" id="loginForm">
+        <p class="eyebrow">Welcome back</p>
+        <h2>Login to PFMS</h2>
+        <label>Email
+          <input type="email" id="loginEmail" required placeholder="you@example.com">
+        </label>
+        <label>Password
+          <input type="password" id="loginPassword" required placeholder="Enter password">
+        </label>
+        <button class="primary-btn" type="submit">Login</button>
+        <p class="form-note">New user? <a href="register.html">Create an account</a></p>
+        <p class="message" id="authMessage"></p>
+      </form>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

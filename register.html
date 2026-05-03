@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | PFMS</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell reverse">
+    <section class="auth-visual">
+      <div class="brand-mark">PF</div>
+      <p class="eyebrow">Start with your own balance</p>
+      <h1>Your opening wallet balance becomes the base.</h1>
+      <p class="auth-copy">PFMS does not preload fake dashboard money. Register, enter your initial balance, then build the ledger from your transactions.</p>
+      <div class="visual-card">
+        <span class="mini-icon">DB</span>
+        <div>
+          <strong>DBMS-ready workflow</strong>
+          <p>Users, transactions, budgets, goals and reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <form class="auth-form" id="registerForm">
+        <p class="eyebrow">Create account</p>
+        <h2>Register for PFMS</h2>
+        <label>Name
+          <input type="text" id="registerName" required placeholder="Full name">
+        </label>
+        <label>Email
+          <input type="email" id="registerEmail" required placeholder="you@example.com">
+        </label>
+        <label>Password
+          <input type="password" id="registerPassword" required minlength="4" placeholder="Minimum 4 characters">
+        </label>
+        <label>Initial Balance
+          <input type="number" id="registerBalance" required min="0" step="0.01" placeholder="Enter starting wallet balance">
+        </label>
+        <button class="primary-btn" type="submit">Create account</button>
+        <p class="form-note">Already registered? <a href="login.html">Login</a></p>
+        <p class="message" id="authMessage"></p>
+      </form>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>
